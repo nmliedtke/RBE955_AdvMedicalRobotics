@@ -29,6 +29,7 @@ qi = q0;
 
 % ...and the starting position:
 T = robot.fkine(q0);
+
 pi = transl(T)';
 
 
@@ -39,8 +40,17 @@ while norm(pd - pi) > 1e-3
     J = robot.jacob0(qi);
     J = J(1:3,1:5);
     
+   
+    
     %%  *** ADD YOUR CODE BELOW ***
-    % deltaQ = 
+     Jinv = pinv(J)
+    Ttemp = robot.fkine(qi);
+    Ptemp = transl(Ttemp)';
+    e = pd - Ptemp
+    
+    
+     
+     deltaQ = Jinv * e
     
     % Update qi to get it closer to qd
     qi = qi + [deltaQ; 0];
