@@ -41,10 +41,10 @@ T34 = tdh(dhtable(4,:));
 T45 = tdh(dhtable(5,:));
 T56 = tdh(dhtable(6,:));
 
-T06 = T01*T12*T23*T34*T45*T56;
+T06 = T0
 
- p = T06(1:3,4)
- z = T06(1:3,3)
+% p = ?
+% z = ?
 
 %% *** TESTS --- DO NOT TOUCH THE CODE BELOW ***
 
