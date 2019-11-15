@@ -45,10 +45,6 @@ classdef Wrist
                     0, 1, 0, 0;...
                     -sin(k*s), 0, cos(k*s), sin(k*s)/k;...
                     0,0,0,1]
-                
-                distanceT = [1,0,0,0; 0,1,0,0; 0,0,1,obj.notches(i).distance; 0,0,0,1]
-                
-                Tfinal = Tfinal * notchT * distanceT;
             end
             
         end
